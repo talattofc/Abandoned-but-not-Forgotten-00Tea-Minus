@@ -1,4 +1,4 @@
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import { memo, useCallback, useEffect, useMemo, useRef, useState, type CSSProperties } from 'react';
 import { destinations, type Destination, type DestinationId } from '../data/destinationsData';
 import { useElementSize } from '../hooks/useElementSize';

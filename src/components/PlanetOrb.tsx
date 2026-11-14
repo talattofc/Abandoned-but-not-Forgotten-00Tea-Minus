@@ -19,7 +19,6 @@ export const PlanetOrb = memo(function PlanetOrb({ dest, size, dimmed = false }:
   }
 
   const { base, detail, shade } = dest.palette;
-  const vb = 100;
   const isRinged = dest.visual === 'ringed';
   // Give Saturn extra horizontal room for its flat rings
   const svgW = isRinged ? Math.round(size * 1.95) : size;
