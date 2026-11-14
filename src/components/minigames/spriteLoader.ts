@@ -14,7 +14,7 @@ export function loadCanvasSprite(path: string, onLoad?: () => void): HTMLImageEl
   return img;
 }
 
-export function isSpriteReady(img: HTMLImageElement | undefined): img is HTMLImageElement {
+export function isSpriteReady(img: HTMLImageElement | null | undefined): img is HTMLImageElement {
   return Boolean(img && img.complete && img.naturalWidth > 0);
 }
 
