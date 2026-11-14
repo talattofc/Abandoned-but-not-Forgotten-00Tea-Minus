@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- Custom fonts ----------
+ * Declared as a weight range + normal style so the browser uses the real
+ * glyphs everywhere instead of synthesizing extra bold / italic.
+ */
+@font-face {
+  font-family: 'Structed Beginning';
+  src: url('/fonts/TheStructedBeginning.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Stickle';
+  src: url('/fonts/StickleBoldItalic.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  background: #070a12;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@layer components {
+  /* Flat mission-control panel: solid fill, crisp 1px border, no blur. */
+  .panel {
+    background: #0e1320;
+    border: 1px solid #232b42;
+  }
+}
+
+/* ---------- Rotations (transform only = GPU composited) ---------- */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin-rev {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+.spin-slow {
+  animation: spin 24s linear infinite;
+}
+.spin-slower {
+  animation: spin 90s linear infinite;
+}
+.orbit-cw {
+  animation: spin var(--orbit-dur, 40s) linear infinite;
+  animation-delay: var(--orbit-delay, 0s);
+  will-change: transform;
+}
+.orbit-ccw {
+  animation: spin-rev var(--orbit-dur, 40s) linear infinite;
+  animation-delay: var(--orbit-delay, 0s);
+  will-change: transform;
+}
+.is-paused {
+  animation-play-state: paused !important;
+}
+
+@keyframes voice-pulse {
+  0%,
+  100% {
+    transform: scaleY(0.35);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+.voice-bar {
+  transform-origin: bottom;
+  animation: voice-pulse 0.7s ease-in-out infinite;
+}
+
+@keyframes ken-burns {
+  0% {
+    transform: scale(1) translate(0%, 0%);
+  }
+  50% {
+    transform: scale(1.07) translate(-1.5%, -1%);
+  }
+  100% {
+    transform: scale(1) translate(0%, 0%);
+  }
+}
+.ken-burns {
+  animation: ken-burns 16s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes scan-sweep {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(400%);
+  }
+}
+.scan-sweep {
+  animation: scan-sweep 1.2s linear infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spin-slow,
+  .spin-slower,
+  .orbit-cw,
+  .orbit-ccw,
+  .voice-bar,
+  .ken-burns,
+  .scan-sweep {
+    animation: none !important;
+  }
+}
