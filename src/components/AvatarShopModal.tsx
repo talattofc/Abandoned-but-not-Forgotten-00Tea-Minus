@@ -215,7 +215,16 @@ export function AvatarShopModal({
 
             {/* Tab Content */}
             {tab === 'avatars' ? (
-              <div className="mt-3 grid grid-cols-3 gap-2.5">
+              <div className="mt-3 space-y-2">
+                <div className="flex items-center justify-between px-0.5">
+                  <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-muted">
+                    Custom Space Emblems
+                  </span>
+                  <span className="rounded border border-line bg-[#070A12] px-2 py-0.5 font-mono text-[9px] font-bold uppercase tracking-wider text-muted">
+                    AI GENERATED ILLUSTRATION
+                  </span>
+                </div>
+                <div className="grid grid-cols-3 gap-2.5">
                 {avatars.map((a) => {
                   const owned = unlockedAvatarIds.includes(a.id) || a.cost === 0;
                   const equipped = a.id === currentAvatarId;
@@ -264,6 +273,7 @@ export function AvatarShopModal({
                     </button>
                   );
                 })}
+                </div>
               </div>
             ) : (
               <div className="mt-3 grid grid-cols-2 gap-2.5">

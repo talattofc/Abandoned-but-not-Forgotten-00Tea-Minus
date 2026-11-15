@@ -99,6 +99,9 @@ export function LightSpeedPing({ hardware, accentColor }: LightSpeedPingProps) {
             `Pulse in flight... ${Math.round(progress * 100)}% (${ping.isFastForward ? 'fast-forward' : `${(progress * 1.28).toFixed(2)}s`})`}
           {state === 'done' && ping.resultNote}
         </span>
+        <span className="text-[10px] font-bold uppercase tracking-wider text-muted/80">
+          Educational Simulation – Simplified Model
+        </span>
       </div>
     </div>
   );

@@ -43,9 +43,11 @@ export const TopHUD = memo(function TopHUD({
           </div>
           <div className="min-w-0">
             <h1 className="truncate font-display text-sm font-bold leading-tight tracking-wide text-ink sm:text-base md:text-lg">
-              Abandoned but not Forgotten
+              MISSION ECHO
             </h1>
-            <p className="truncate font-sans text-xs text-muted">00Tea-Minus</p>
+            <p className="truncate font-sans text-[11px] text-muted sm:text-xs">
+              The Stories Behind Space Exploration • by 00Tea-Minus
+            </p>
           </div>
         </div>
 

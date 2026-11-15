@@ -313,8 +313,8 @@ export default function App() {
 
         <footer className="relative z-20 flex flex-wrap items-center justify-center gap-3 border-t border-line bg-[#070A12] px-4 py-3 text-center font-sans text-xs text-muted">
           <span>
-            Abandoned but not Forgotten • 00Tea-Minus | Educational space project using public domain imagery and media
-            courtesy of NASA (science.nasa.gov / nssdc.gsfc.nasa.gov).
+            MISSION ECHO — The Stories Behind Space Exploration • by 00Tea-Minus | Uses scientific information, imagery,
+            and mission resources from NASA Science, NASA NSSDCA, JPL-Caltech, and NASA Ames Research Center.
           </span>
           <button
             type="button"
@@ -322,7 +322,7 @@ export default function App() {
             className="inline-flex items-center gap-1.5 rounded-md border border-line-strong bg-[#0E1320] px-2.5 py-1 font-sans text-xs font-bold text-ink transition-colors hover:border-deep hover:text-deep"
           >
             <TurkishFlagSvg width={16} height={11} />
-            <span>About &amp; Credits</span>
+            <span>About, Credits &amp; AI Disclosure</span>
           </button>
         </footer>
 

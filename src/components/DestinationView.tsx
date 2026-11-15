@@ -81,13 +81,16 @@ export function DestinationView({
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 + i * 0.08 }}
               >
-                {/* Real NASA Hero PNG */}
-                <div className="aspect-[16/10] w-full overflow-hidden rounded-lg border border-line bg-[#0B1020]">
+                {/* Hardware Illustration */}
+                <div className="relative aspect-[16/10] w-full overflow-hidden rounded-lg border border-line bg-[#0B1020]">
                   <img
                     src={hw.heroImage}
                     alt={hw.name}
                     className="h-full w-full object-contain p-2 transition-transform duration-300 group-hover:scale-105"
                   />
+                  <span className="pointer-events-none absolute left-2 top-2 rounded border border-line bg-[#070A12]/90 px-2 py-0.5 font-mono text-[9px] font-bold uppercase tracking-wider text-muted">
+                    AI GENERATED ILLUSTRATION
+                  </span>
                 </div>
 
                 {/* Badges row */}

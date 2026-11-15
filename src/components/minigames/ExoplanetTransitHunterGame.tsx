@@ -408,7 +408,7 @@ export function ExoplanetTransitHunterGame({
     <div className="space-y-3">
       <div className="flex flex-wrap items-center justify-between gap-2 rounded-lg border border-line bg-[#0E1320] px-3.5 py-2">
         <p className="font-sans text-xs font-semibold text-ink">
-          Objective: Pan Kepler’s telescope across Cygnus, center on the 4 blinking stars, and snap Exoplanet Photos!
+          Objective: Pan Kepler’s photometer across Cygnus, center on the 4 blinking stars, and record their Transit Light Curves!
         </p>
         <div className="flex items-center gap-3 font-mono text-xs font-bold">
           <span className="text-muted">
@@ -449,14 +449,14 @@ export function ExoplanetTransitHunterGame({
         {lockedTarget && status === 'playing' && (
           <div className="absolute inset-x-0 bottom-4 z-10 flex flex-col items-center gap-2 px-4">
             <span className="rounded-md border border-emerald-400/60 bg-[#0F2420] px-3 py-1 font-mono text-[11px] font-bold text-emerald-300">
-              TRANSIT DETECTED — READY TO CAPTURE!
+              STELLAR BRIGHTNESS DIP — TRANSIT DETECTED!
             </span>
             <button
               type="button"
               onClick={handleCapture}
               className="rounded-xl border-2 border-white bg-[#0E1320] px-5 py-2.5 font-sans text-sm font-bold text-amber-300 shadow-lg"
             >
-              📷 SNAP EXOPLANET PHOTO ({lockedTarget.name})
+              📈 RECORD TRANSIT LIGHT CURVE ({lockedTarget.name})
             </button>
           </div>
         )}
@@ -464,8 +464,8 @@ export function ExoplanetTransitHunterGame({
         {status === 'won' && (
           <MiniGameResultOverlay
             status="won"
-            title="Kepler Star Catalog Complete!"
-            summary="You explored the Cygnus constellation, spotted 4 transiting exoplanets, and photographed Kepler-186f, Kepler-22b, Kepler-16b, and Kepler-10b!"
+            title="Kepler Transit Catalog Complete!"
+            summary="You scanned the Cygnus constellation, measured 4 Stellar Brightness Light Curve dips, and confirmed Exoplanet Candidates Kepler-186f, Kepler-22b, Kepler-16b, and Kepler-10b!"
             accentColor={accentColor}
             alreadyCompleted={alreadyCompleted}
             onRetry={handleFullReset}
@@ -484,9 +484,12 @@ export function ExoplanetTransitHunterGame({
           />
           <div>
             <div className="font-display text-base font-bold text-ink">
-              {discoveryCard.planetName} Discovered!
+              Transit Detected — {discoveryCard.planetName} Candidate Confirmed!
             </div>
             <p className="mt-0.5 font-sans text-xs text-muted">{discoveryCard.fact}</p>
+            <p className="mt-1 font-mono text-[10px] font-bold uppercase tracking-wider text-sky-300">
+              Educational Artist Representation • Confirmed via Stellar Brightness Light Curve
+            </p>
           </div>
         </div>
       )}
@@ -520,7 +523,7 @@ export function ExoplanetTransitHunterGame({
                   {isFound ? t.planetName : t.name}
                 </div>
                 <div className="font-mono text-[10px] text-muted">
-                  {isFound ? 'PHOTOGRAPHED ✓' : 'UNDISCOVERED'}
+                  {isFound ? 'TRANSIT CONFIRMED ✓' : 'UNDETECTED'}
                 </div>
               </div>
             </div>
@@ -531,7 +534,7 @@ export function ExoplanetTransitHunterGame({
       {/* Controls hint + Touch D-pad */}
       <div className="flex flex-wrap items-center justify-between gap-3">
         <span className="font-mono text-xs text-muted">
-          Drag Sky or use WASD / Arrow Keys • Space = Snap Exoplanet Photo
+          Drag Sky or use WASD / Arrow Keys • Space = Record Transit Light Curve
         </span>
         <div className="flex items-center gap-1.5">
           {(

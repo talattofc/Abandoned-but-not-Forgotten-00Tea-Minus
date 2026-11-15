@@ -228,6 +228,10 @@ export function BlueprintLabView({
                   className="h-full w-full object-contain p-4"
                 />
 
+                <span className="pointer-events-none absolute left-3 top-3 rounded border border-line bg-[#070A12]/90 px-2 py-0.5 font-mono text-[9px] font-bold uppercase tracking-wider text-muted">
+                  AI GENERATED ILLUSTRATION
+                </span>
+
                 {/* Zoom Corner Button */}
                 <button
                   type="button"

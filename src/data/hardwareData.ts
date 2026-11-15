@@ -1455,11 +1455,11 @@ export const hardwareItems: HardwareItem[] = [
       resultNote: 'Fast-forward complete! Real signal takes ~8.4 minutes—Kepler was powered down in 2018 after running out of fuel.',
     },
     miniGame: {
-      title: 'Exoplanet Telescope Explorer',
-      subtitle: 'Scan the Cygnus starfield and photograph alien worlds',
+      title: 'Exoplanet Transit Explorer',
+      subtitle: 'Scan the Cygnus starfield and detect transiting exoplanets',
       instructions:
-        "Peer through Kepler's lens and pan across the starry Cygnus sky! Watch for stars that blink as a hidden planet crosses in front of them, lock on, and snap a photo to reveal 4 amazing exoplanets.",
-      controlsHint: 'Drag sky (or WASD / Arrows) to pan telescope • Space / Tap button to capture exoplanet',
+        "Peer through Kepler's photometer and pan across the starry Cygnus sky! Watch for stars that blink as a hidden planet crosses in front of them, lock on, and record the Stellar Brightness Light Curve to confirm 4 Exoplanet Candidates.",
+      controlsHint: 'Drag sky (or WASD / Arrows) to pan telescope • Space / Tap button to record transit',
     },
     quiz: [
       {
@@ -1483,7 +1483,7 @@ export const hardwareItems: HardwareItem[] = [
         options: [
           'It crashed into Jupiter',
           'It ran out of fuel needed to aim its telescope',
-          'It finished photographing every planet in the universe',
+          'It finished measuring every star in the universe',
         ],
         correctIndex: 1,
         explanation: 'After nine years of observations, Kepler depleted its thruster fuel and was safely decommissioned.',

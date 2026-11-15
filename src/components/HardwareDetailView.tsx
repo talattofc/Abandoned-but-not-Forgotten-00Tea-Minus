@@ -199,6 +199,9 @@ export function HardwareDetailView({
                   alt={hardware.name}
                   className="h-full w-full object-contain p-3"
                 />
+                <span className="pointer-events-none absolute left-2.5 top-2.5 rounded border border-line bg-[#070A12]/90 px-2 py-0.5 font-mono text-[9px] font-bold uppercase tracking-wider text-muted">
+                  AI GENERATED ILLUSTRATION
+                </span>
                 <button
                   type="button"
                   onClick={(e) => {

@@ -80,8 +80,11 @@ export function MiniGameView({
         <div className="mt-4 rounded-xl border border-line bg-space p-4">
           {!launched ? (
             <div className="grid gap-4 md:grid-cols-[1fr_1.1fr] md:items-center">
-              <div className="aspect-[16/10] w-full overflow-hidden rounded-lg border border-line bg-[#0B1020]">
+              <div className="relative aspect-[16/10] w-full overflow-hidden rounded-lg border border-line bg-[#0B1020]">
                 <img src={hardware.heroImage} alt={hardware.name} className="h-full w-full object-contain p-3" />
+                <span className="pointer-events-none absolute left-2 top-2 rounded border border-line bg-[#070A12]/90 px-2 py-0.5 font-mono text-[9px] font-bold uppercase tracking-wider text-muted">
+                  AI GENERATED ILLUSTRATION
+                </span>
               </div>
               <div className="space-y-3">
                 <p className="font-sans text-sm leading-relaxed text-ink">{hardware.miniGame.instructions}</p>
@@ -99,7 +102,13 @@ export function MiniGameView({
               </div>
             </div>
           ) : (
-            renderSimulation()
+            <div className="space-y-2.5">
+              {renderSimulation()}
+              <div className="flex flex-wrap items-center justify-between gap-2 rounded-lg border border-line bg-[#0E1320] px-3 py-1.5 font-mono text-[10px] font-bold uppercase tracking-wider text-muted">
+                <span>AI GENERATED ILLUSTRATION • Educational Simulation – Simplified Model</span>
+                <span>00Tea-Minus Mission Sim</span>
+              </div>
+            </div>
           )}
         </div>
       </div>
