@@ -249,7 +249,7 @@ export function HardwareDetailView({
                 </div>
                 <div className="mt-3">
                   <h3 className="font-display text-lg font-bold text-ink group-hover:text-white">
-                    Mission Story (Animated + Voice)
+                    Mission Story
                   </h3>
                   <p className="mt-1 font-sans text-sm text-muted">
                     Explore 4 animated chapters from launch to legacy with Voice Mode narration.
@@ -360,7 +360,7 @@ export function HardwareDetailView({
                   )}
                 </div>
                 <div className="mt-3">
-                  <h3 className="font-display text-lg font-bold text-ink">Mission Quiz (+Coins)</h3>
+                  <h3 className="font-display text-lg font-bold text-ink">Mission Quiz</h3>
                   <p className="mt-1 font-sans text-sm text-muted">
                     {storyCompleted
                       ? 'Answer 3 mission questions to earn Cosmic Coins for the Avatar Shop!'
