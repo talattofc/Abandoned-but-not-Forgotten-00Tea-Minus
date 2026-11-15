@@ -10,7 +10,9 @@
 ![Vite](https://img.shields.io/badge/Vite-5-141A29?style=for-the-badge&logo=vite&logoColor=646CFF)
 ![NASA Mission Resources](https://img.shields.io/badge/Sources-NASA_Mission_Resources-0B3D91?style=for-the-badge&logo=nasa&logoColor=white)
 
-**Live App:** [abandoned-but-not-forgotten-00-tea.vercel.app](https://abandoned-but-not-forgotten-00-tea.vercel.app/) • **Repository:** [github.com/talattofc/Abandoned-but-not-Forgotten-00Tea-Minus](https://github.com/talattofc/Abandoned-but-not-Forgotten-00Tea-Minus)
+[![Launch Live Site](https://img.shields.io/badge/Launch_Live_Site-Click_Here_to_Explore_Mission_Echo-10B981?style=for-the-badge&logo=vercel&logoColor=white)](https://abandoned-but-not-forgotten-00-tea.vercel.app/)
+
+[Click here to open the live web app](https://abandoned-but-not-forgotten-00-tea.vercel.app/)
 
 </div>
 
