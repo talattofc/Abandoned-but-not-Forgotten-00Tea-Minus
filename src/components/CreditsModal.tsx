@@ -102,7 +102,25 @@ export function CreditsModal({ open, onClose }: CreditsModalProps) {
                 <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-muted">
                   Creators
                 </span>
-                <span className="font-display text-sm font-bold text-ink">@talatt &amp; @micir</span>
+                <span className="font-display text-sm font-bold text-ink">
+                  <a
+                    href="https://github.com/talattofc"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline decoration-line-strong underline-offset-2 hover:text-sky-300"
+                  >
+                    @talattofc
+                  </a>{' '}
+                  &amp;{' '}
+                  <a
+                    href="https://github.com/micir2010"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline decoration-line-strong underline-offset-2 hover:text-sky-300"
+                  >
+                    @micir
+                  </a>
+                </span>
               </div>
 
               <div className="flex items-center justify-between gap-2 rounded-xl border border-line bg-[#0E1320] px-3.5 py-2">
