@@ -331,16 +331,24 @@ export function BlueprintLabView({
                       alt={activeHotspot.label}
                       className="h-full w-full object-contain transition-transform group-hover:scale-105"
                     />
+                    <span className="absolute left-1 top-1 rounded border border-line bg-[#0E1320]/95 px-1 py-0.5 font-mono text-[9px] font-bold leading-none text-muted">
+                      AI
+                    </span>
                     <span className="absolute bottom-1 right-1 rounded border border-line bg-[#0E1320] px-1 text-[10px]">
                       🔍
                     </span>
                   </button>
                   <div className="min-w-0">
-                    <div
-                      className="font-sans text-xs font-bold uppercase tracking-wider"
-                      style={{ color: accentColor }}
-                    >
-                      Part #{activeHotspot.number}
+                    <div className="flex flex-wrap items-center gap-2">
+                      <span
+                        className="font-sans text-xs font-bold uppercase tracking-wider"
+                        style={{ color: accentColor }}
+                      >
+                        Part #{activeHotspot.number}
+                      </span>
+                      <span className="rounded border border-line bg-[#0E1320] px-1.5 py-0.5 font-mono text-[9px] font-bold uppercase text-muted">
+                        AI Generated Illustration
+                      </span>
                     </div>
                     <div className="mt-0.5 font-display text-base font-bold leading-snug text-ink">
                       {activeHotspot.label}
